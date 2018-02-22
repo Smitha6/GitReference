@@ -9,24 +9,32 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
 
     ListView listView;
-    Command command;
+    GitReference command;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ArrayList<Command> commands = new ArrayList<>();
+        ArrayList<GitReference> commands = new ArrayList<>();
 
 
 
 
 
-        command = new Command();
+        command = new GitReference();
         command.setCommand("clone");
         command.setExample("git clone ssh://user@domain.com/repo.git");
         command.setExplanation("Clone an existing repository");
         commands.add(command);
+
+        command = new GitReference();
+        command.setCommand("2");
+        command.setExample("2");
+        command.setExplanation("2");
+        commands.add(command);
+
+
 
         CommandAdapter adapter = new CommandAdapter(this, commands);
         listView.setAdapter(adapter);
