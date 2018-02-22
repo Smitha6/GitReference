@@ -51,5 +51,3 @@ public class CommandAdapter extends BaseAdapter {
         return rowView;
     }
 }
-
-/

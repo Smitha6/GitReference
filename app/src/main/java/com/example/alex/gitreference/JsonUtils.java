@@ -1,5 +1,9 @@
+
+
 import android.content.Context;
 import android.util.Log;
+
+import com.example.alex.gitreference.GitReference;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -13,6 +17,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+
 
 
 public class JsonUtils {
@@ -80,7 +85,7 @@ public class JsonUtils {
 
     public static boolean create(Context context, String fileName, String jsonString){
         try {
-            FileOutputStream fos = // TODO: Your code goes here
+            FileOutputStream fos = context.openFileOutput(fileName,Context.MODE_PRIVATE); // TODO: Your code goes here
             if (jsonString != null) {
                 fos.write(jsonString.getBytes());
             }
