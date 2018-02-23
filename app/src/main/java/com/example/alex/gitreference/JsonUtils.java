@@ -1,9 +1,7 @@
-
 package com.example.alex.gitreference;
+
 import android.content.Context;
 import android.util.Log;
-
-//import com.example.alex.gitreference.GitReference;
 
 import org.json.JSONArray;
 import org.json.JSONObject;

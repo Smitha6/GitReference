@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        listView = findViewById(R.id.listView);
         ArrayList<GitReference> commands = new ArrayList<>();
 
 
@@ -30,8 +31,8 @@ public class MainActivity extends AppCompatActivity {
 
         command = new GitReference();
         command.setCommand("2");
-        command.setExample("2");
-        command.setExplanation("2");
+        command.setExample("3");
+        command.setExplanation("4");
         commands.add(command);
 
 
