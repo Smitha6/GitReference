@@ -10,8 +10,25 @@
     <ListView
         android:id="@+id/listView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        >
     </ListView>
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/buttonMarginBottom"
+        android:layout_marginRight="@dimen/buttonMarginRight"
+        android:adjustViewBounds="true"
+        android:background="?android:attr/selectableItemBackground"
+        android:maxHeight="@dimen/buttonHeight"
+        android:maxWidth="@dimen/buttonWidth"
+        android:scaleType="fitCenter"
+        android:tint="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:srcCompat="@drawable/plus_button" />
 
 
 </android.support.constraint.ConstraintLayout>

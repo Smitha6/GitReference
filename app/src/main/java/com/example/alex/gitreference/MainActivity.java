@@ -30,23 +30,6 @@ public class MainActivity extends AppCompatActivity {
             System.out.println(e);
         }
 
-
-
-        /*
-        command = new GitReference();
-        command.setCommand("command 1");
-        command.setExample("example 1");
-        command.setExplanation("explanation 1");
-        commands.add(command);
-
-        command = new GitReference();
-        command.setCommand("command 2");
-        command.setExample("example 2");
-        command.setExplanation("explanation 2");
-        commands.add(command);
-        */
-
-
         CommandAdapter adapter = new CommandAdapter(this, commands);
         listView.setAdapter(adapter);
 
