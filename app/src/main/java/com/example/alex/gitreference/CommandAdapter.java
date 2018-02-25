@@ -39,10 +39,10 @@ public class CommandAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View view, ViewGroup viewGroup)
     {
-        View rowView = mInflater.inflate(android.R.layout.simple_expandable_list_item_2, viewGroup, false);
+        View rowView = mInflater.inflate(R.layout.list_3_items, viewGroup, false);
 
-        TextView commandView = rowView.findViewById(android.R.id.text1);
-        TextView commandExampleView = rowView.findViewById(android.R.id.text2);
+        TextView commandView = rowView.findViewById(R.id.text1);
+        TextView commandExampleView = rowView.findViewById(R.id.text2);
 
         GitReference command = (GitReference) getItem(position);
         commandView.setText(command.getCommand());

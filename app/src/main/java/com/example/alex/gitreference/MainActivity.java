@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         listView = findViewById(R.id.listView);
         ArrayList<GitReference> commands = new ArrayList<>();
 
-
+        /*
         try {
             InputStream inputStream = getApplicationContext().getAssets().open("gitReference.json");
             commands = JsonUtils.populateGitReferences(JsonUtils.parseJsonToString(inputStream));
@@ -29,6 +29,14 @@ public class MainActivity extends AppCompatActivity {
         catch(Exception e) {
             System.out.println(e);
         }
+
+        */
+        command = new GitReference();
+        command.setCommand("command 1");
+        command.setExample("example 1");
+        commands.add(command);
+
+
 
 
         CommandAdapter adapter = new CommandAdapter(this, commands);
