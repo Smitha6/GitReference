@@ -43,10 +43,12 @@ public class CommandAdapter extends BaseAdapter {
 
         TextView commandView = rowView.findViewById(R.id.text1);
         TextView commandExampleView = rowView.findViewById(R.id.text2);
+        TextView commandExplanationView = rowView.findViewById(R.id.text3);
 
         GitReference command = (GitReference) getItem(position);
         commandView.setText(command.getCommand());
         commandExampleView.setText(command.getExample());
+        commandExplanationView.setText(command.getExplanation());
 
         return rowView;
     }
