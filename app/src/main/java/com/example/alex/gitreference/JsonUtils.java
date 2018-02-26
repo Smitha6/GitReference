@@ -77,7 +77,7 @@ public class JsonUtils {
             }
             return sb.toString();
         } catch (FileNotFoundException fileNotFound) {
-            System.out.println("FILE NOT FOUND!!!!!!!!!!!!!");
+            System.out.println("File not found");
             return null;
         } catch (IOException ioException) {
             return null;
@@ -102,7 +102,14 @@ public class JsonUtils {
 
     public static boolean append(Context context, String fileName, String jsonString) {
         // TODO: Your code here
+        try {
+            FileOutputStream outputStream = context.openFileOutput(fileName,Context.MODE_PRIVATE);
 
+
+        }
+        catch(Exception e) {
+            System.out.println(e);
+        }
         return false;
     }
 
