@@ -14,6 +14,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 
 
@@ -103,9 +104,10 @@ public class JsonUtils {
     public static boolean append(Context context, String fileName, String jsonString) {
         // TODO: Your code here
         try {
-            FileOutputStream outputStream = context.openFileOutput(fileName,Context.MODE_PRIVATE);
-
-
+            OutputStreamWriter outputStreamWriter = new OutputStreamWriter(context.openFileOutput(fileName, Context.MODE_PRIVATE));
+            JSONObject jsonObject = new JSONObject(fileName);
+            jsonObject.put("TEST",jsonString);
+            outputStreamWriter.close();
         }
         catch(Exception e) {
             System.out.println(e);

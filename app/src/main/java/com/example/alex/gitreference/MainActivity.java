@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         try {
             InputStream inputStream = getApplicationContext().getAssets().open("gitReference.json");
             commands = JsonUtils.populateGitReferences(JsonUtils.parseJsonToString(inputStream));
+            inputStream.close();
         }
         catch(Exception e) {
             System.out.println(e);
@@ -86,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
                 commands.add(newCommand);
 
                 //add new command to .json file
-
+                JsonUtils.append(getApplicationContext(),"gitReference.json","TEST");
 
             }
         });
