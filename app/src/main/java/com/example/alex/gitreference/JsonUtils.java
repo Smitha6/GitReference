@@ -105,9 +105,6 @@ public class JsonUtils {
         // TODO: Your code here
         try {
             OutputStreamWriter outputStreamWriter = new OutputStreamWriter(context.openFileOutput(fileName, Context.MODE_PRIVATE));
-            JSONObject jsonObject = new JSONObject(fileName);
-            jsonObject.put("TEST",jsonString);
-            outputStreamWriter.close();
         }
         catch(Exception e) {
             System.out.println(e);
